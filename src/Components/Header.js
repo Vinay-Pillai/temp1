@@ -6,8 +6,9 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
+   //const project = this.props.data.project;
+    const insta = this.props.data.insta;
+    const volunteer = this.props.data.volunteer;
     const name = this.props.data.name;
     const description = this.props.data.description;
 
@@ -32,19 +33,19 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#about">
-                About
+                About Us
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#resume">
-                Resume
+                Registration
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#portfolio">
-                Works
+                Projects
               </a>
             </li>
 
@@ -62,19 +63,21 @@ class Header extends Component {
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
+              <h3>{description}</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a href={volunteer} className="button btn project-btn">
+                  <i className="fa fa-book"></i>Volunteer
                 </a>
-                <a href={github} className="button btn github-btn">
-                  <i className="fa fa-github"></i>Github
+                <a href={insta} className="button btn project-btn">
+                  <i className="fa fa-instagram"></i>Instagram
                 </a>
               </ul>
             </Fade>
+
+            
           </div>
         </div>
 
